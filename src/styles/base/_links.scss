@@ -1,0 +1,38 @@
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--theme-link-color);
+
+  &:hover {
+    border-width: 0 0 2px 0;
+    border-style: dashed;
+    border-color: var(--theme-link-underline-color);
+    color: var(--color-black);
+  }
+
+  &:visited {
+    color: var(--theme-link-color);
+  }
+
+  &.gradient {
+    color: var(--theme-link-color);
+    background: linear-gradient(
+      to right,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:hover {
+      border-width: 0 0 2px 0;
+      border-style: dashed;
+      border-color: var(--color-primary);
+    }
+  }
+}
+
+a.no-style {
+  color: var(--theme-link-color);
+  text-decoration: none;
+}

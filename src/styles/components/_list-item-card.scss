@@ -1,0 +1,5 @@
+.list-item-card {
+  &:hover {
+    background-color: var(--theme-card-hover-bg-color);
+  }
+}

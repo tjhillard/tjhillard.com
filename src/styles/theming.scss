@@ -1,0 +1,26 @@
+// Default theme (light)
+:root {
+  --theme-bg-color: var(--color-white);
+  --theme-text-color: var(--color-black);
+  --theme-link-color: var(--color-black);
+  --theme-link-underline-color: var(--color-black);
+  --theme-card-hover-bg-color: var(--color-light-gray);
+  --theme-footer-text-color: var(--color-dark-light);
+  --theme-nav-scroll-progress-bar: var(--color-primary);
+}
+
+// Dark Theme
+body.dark {
+  --theme-bg-color: var(--color-dark);
+  --theme-text-color: var(--color-white);
+  --theme-link-color: lighten(var(--color-gray), 10%);
+  --theme-link-underline-color: var(--color-gray-light);
+  --theme-card-hover-bg-color: var(--color-dark-light);
+  --theme-footer-text-color: var(--color-light-gray);
+  --theme-nav-scroll-progress-bar: var(--color-secondary);
+}
+
+body {
+  background-color: var(--theme-bg-color);
+  color: var(--theme-text-color);
+}

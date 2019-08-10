@@ -5,5 +5,15 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  plugins: [
+    'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        strict: true,
+        isTSX: true,
+        allExtensions: true,
+      },
+    },
+  ],
 }

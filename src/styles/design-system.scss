@@ -1,0 +1,39 @@
+$steller-colors: (
+  'white': #fff,
+  'black': #050505,
+  'dark': #1a202c,
+  'dark-light': #2d3847,
+  'dark-lighgter': #3a4555,
+  'gray': #4a5568,
+  'light-gray': #f2f2f2,
+  'primary': #55c1ff,
+  'secondary': #5863f8,
+);
+
+$steller-container-width: 800px;
+
+@font-face {
+  font-family: 'Geomanist';
+  src: url('./fonts/geomanist/geomanist-book.eot');
+  src: url('./fonts/geomanist/geomanist-book.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/geomanist/geomanist-book.woff2') format('woff2'),
+    url('./fonts/geomanist/geomanist-book.woff') format('woff'),
+    url('./fonts/geomanist/geomanist-book.ttf') format('truetype'),
+    url('./fonts/geomanist/geomanist-book.svg#geomanist-book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$steller-font-families: (
+  'secondary': 'Geomanist',
+  'primary': (
+    'Nanum Gothic',
+    sans-serif,
+  ),
+);
+
+$steller-gradients: (
+  'primary':
+    linear-gradient(to right, var(--color-primary), var(--color-secondary)),
+);

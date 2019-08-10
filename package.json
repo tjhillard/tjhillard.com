@@ -14,10 +14,20 @@
   },
   "dependencies": {
     "gatsby": "^2.13.55",
+    "gatsby-plugin-react-helmet": "^3.1.3",
+    "gatsby-plugin-sass": "^2.1.5",
+    "gatsby-plugin-typescript": "^2.1.2",
+    "node-sass": "^4.12.0",
+    "normalize.css": "^8.0.1",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "react-helmet": "^5.2.1",
+    "steller-css": "^1.0.0-alpha.6"
   },
   "devDependencies": {
+    "@types/node": "^12.7.1",
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
     "prettier": "^1.18.2"
   },
   "repository": {

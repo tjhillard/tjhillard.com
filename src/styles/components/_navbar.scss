@@ -1,0 +1,22 @@
+.nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  background-color: var(--theme-bg-color);
+  transition: padding var(--speed-normal) linear;
+}
+
+.nav.scrolling {
+  box-shadow: var(--box-shadow-sm);
+}
+
+.nav + .main {
+  padding-top: 100px;
+}
+
+.nav .scroll-progress-bar {
+  background: gradient('primary');
+}
