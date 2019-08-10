@@ -1,7 +1,7 @@
-import React from 'react'
-import projects from '../../data/projects'
-import Layout from '../layouts/main'
-import ListCardItem from '../components/list-item-card'
+import React from 'react';
+import projects from '../../data/projects';
+import Layout from '../layouts/main';
+import ListCardItem from '../components/list-item-card';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -47,6 +47,6 @@ export default class IndexPage extends React.Component {
 
         <div style={{ height: '2000px' }}></div>
       </Layout>
-    )
+    );
   }
 }

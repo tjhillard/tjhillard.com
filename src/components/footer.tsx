@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
 export default class Footer extends React.Component {
   render() {
@@ -20,6 +20,6 @@ export default class Footer extends React.Component {
           </div>
         </div>
       </footer>
-    )
+    );
   }
 }

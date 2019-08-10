@@ -1,12 +1,12 @@
-import React, { PropsWithChildren } from 'react'
-import { Link } from 'gatsby'
+import React, { PropsWithChildren } from 'react';
+import { Link } from 'gatsby';
 
 interface Props extends PropsWithChildren<any> {
-  image: { src: string; alt: string }
-  title: string
-  linkTo?: string
-  href?: string
-  description?: string
+  image: { src: string; alt: string };
+  title: string;
+  linkTo?: string;
+  href?: string;
+  description?: string;
 }
 
 const cardContent = (props: Props) => (
@@ -22,27 +22,27 @@ const cardContent = (props: Props) => (
       <div>{props.children}</div>
     </div>
   </div>
-)
+);
 
 export default class ListItemCard extends React.Component<
   PropsWithChildren<Props>
 > {
   constructor(props: Props) {
-    super(props)
+    super(props);
   }
 
   render() {
     if (this.props.linkTo) {
-      return <Link to={this.props.linkTo}>{cardContent(this.props)}</Link>
+      return <Link to={this.props.linkTo}>{cardContent(this.props)}</Link>;
     }
     if (this.props.href) {
       return (
         <a href={this.props.href} className="link" target="_blank">
           {cardContent(this.props)}
         </a>
-      )
+      );
     }
 
-    return <div>{cardContent(this.props)}</div>
+    return <div>{cardContent(this.props)}</div>;
   }
 }

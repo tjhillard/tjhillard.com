@@ -1,17 +1,17 @@
-import React from 'react'
-import ThemeService from '../services/theme-service'
+import React from 'react';
+import ThemeService from '../services/theme-service';
 
 interface Props {}
 interface State {
-  currentTheme: string
+  currentTheme: string;
 }
 
 export default class ThemeToggler extends React.Component<Props, State> {
   constructor(props: Props) {
-    super(props)
+    super(props);
     this.state = {
       currentTheme: localStorage.getItem('theme'),
-    }
+    };
   }
 
   render() {
@@ -21,7 +21,7 @@ export default class ThemeToggler extends React.Component<Props, State> {
           <span>{this.emoji}</span>
         </span>
       </span>
-    )
+    );
   }
 
   private get emoji() {
@@ -29,13 +29,13 @@ export default class ThemeToggler extends React.Component<Props, State> {
       <span> 🌙 </span>
     ) : (
       <span> ☀️ </span>
-    )
+    );
   }
 
   private toggleTheme() {
-    ThemeService.toggleTheme()
+    ThemeService.toggleTheme();
     this.setState({
       currentTheme: document.body.classList.contains('dark') ? 'dark' : 'light',
-    })
+    });
   }
 }

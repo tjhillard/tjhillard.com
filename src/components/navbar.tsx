@@ -1,26 +1,26 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import ThemeToggler from '../components/theme-toggler'
+import React from 'react';
+import { Link } from 'gatsby';
+import ThemeToggler from '../components/theme-toggler';
 
 interface Props {}
 
 export default class Navbar extends React.Component {
-  private scrollProgressBarRef
-  private navRef
+  private scrollProgressBarRef;
+  private navRef;
 
   constructor(props: Props) {
-    super(props)
-    this.scrollProgressBarRef = React.createRef()
-    this.navRef = React.createRef()
+    super(props);
+    this.scrollProgressBarRef = React.createRef();
+    this.navRef = React.createRef();
   }
 
   componentDidMount() {
-    this.scrollProgressBarRef.current.style.width = '0px'
+    this.scrollProgressBarRef.current.style.width = '0px';
 
     window.onscroll = () => {
-      this.updateNavBarScrollingState()
-      this.updateScrollProgressBar()
-    }
+      this.updateNavBarScrollingState();
+      this.updateScrollProgressBar();
+    };
   }
 
   render() {
@@ -60,25 +60,25 @@ export default class Navbar extends React.Component {
           style={{ height: '3px' }}
         ></div>
       </nav>
-    )
+    );
   }
 
   private updateScrollProgressBar() {
     var winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop
+      document.body.scrollTop || document.documentElement.scrollTop;
     var height =
       document.documentElement.scrollHeight -
-      document.documentElement.clientHeight
-    var scrolled = (winScroll / height) * 100
-    const bar = this.scrollProgressBarRef.current
-    bar.style.width = scrolled + '%'
+      document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    const bar = this.scrollProgressBarRef.current;
+    bar.style.width = scrolled + '%';
   }
 
   private updateNavBarScrollingState() {
     if (window.pageYOffset >= 25) {
-      this.navRef.current.classList.add('scrolling')
+      this.navRef.current.classList.add('scrolling');
     } else {
-      this.navRef.current.classList.remove('scrolling')
+      this.navRef.current.classList.remove('scrolling');
     }
   }
 }
