@@ -1,12 +1,12 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+require('dotenv').config();
 
 module.exports = {
+  siteMetadata: {
+    author: 'TJ Hillard',
+  },
   plugins: [
     'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
@@ -16,4 +16,4 @@ module.exports = {
       },
     },
   ],
-}
+};

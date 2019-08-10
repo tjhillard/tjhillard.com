@@ -1,12 +1,14 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React, { RefObject } from 'react';
+import { Link, graphql, StaticQuery } from 'gatsby';
 import ThemeToggler from '../components/theme-toggler';
 
-interface Props {}
+interface Props {
+  author: string;
+}
 
-export default class Navbar extends React.Component {
-  private scrollProgressBarRef;
-  private navRef;
+export class Navbar extends React.Component<Props> {
+  private scrollProgressBarRef: RefObject<HTMLDivElement>;
+  private navRef: RefObject<HTMLDivElement>;
 
   constructor(props: Props) {
     super(props);
@@ -28,27 +30,23 @@ export default class Navbar extends React.Component {
       <nav ref={this.navRef} className="nav flex flex-col">
         <div className="container w-full py-sm">
           <div className="flex justify-between items-center py-xs">
-            <span className="letter-spacing-wide font-size-2xl">
+            <span className="letter-spacing-wide">
               <Link to="/" className="link pr-sm">
-                <span className="font-family-secondary">TJ Hillard</span>
+                <span className="font-family-secondary font-size-lg md:font-size-2xl">
+                  {this.props.author}
+                </span>
               </Link>
             </span>
 
-            <div className="links">
+            <div className="links font-size-sm md:font-size-md">
               <Link
                 to="/blog"
                 className="font-family-primary ml-lg link font-weight-bold uppercase"
               >
                 Blog
               </Link>
-              <Link
-                to="/blog"
-                className="font-family-primary ml-lg link font-weight-bold uppercase"
-              >
-                Contact
-              </Link>
 
-              <span className="ml-lg">
+              <span className="ml-lg mr-md">
                 <ThemeToggler />
               </span>
             </div>
@@ -64,12 +62,12 @@ export default class Navbar extends React.Component {
   }
 
   private updateScrollProgressBar() {
-    var winScroll =
+    const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
-    var height =
+    const height =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
+    const scrolled = (winScroll / height) * 100;
     const bar = this.scrollProgressBarRef.current;
     bar.style.width = scrolled + '%';
   }
@@ -82,3 +80,18 @@ export default class Navbar extends React.Component {
     }
   }
 }
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            author
+          }
+        }
+      }
+    `}
+    render={data => <Navbar author={data.site.siteMetadata.author} />}
+  />
+);

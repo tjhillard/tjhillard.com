@@ -7,6 +7,9 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
+        <div className="font-family-secondary font-size-4xl pt-lg">
+          Hello! 👋
+        </div>
         <p
           className="font-weight-thin font-size-xl"
           style={{ lineHeight: '2.5rem' }}

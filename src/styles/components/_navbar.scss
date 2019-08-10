@@ -13,10 +13,6 @@
   box-shadow: var(--box-shadow-sm);
 }
 
-.nav + .main {
-  padding-top: 100px;
-}
-
 .nav .scroll-progress-bar {
   background: gradient('primary');
 }
