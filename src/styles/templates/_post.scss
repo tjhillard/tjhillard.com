@@ -1,0 +1,38 @@
+.post-body {
+  font-size: 1.25rem;
+  margin: 32px 0;
+  font-weight: 500;
+  font-family: var(--font-family-body);
+
+  @include below-breakpoint(lg) {
+    font-size: 1rem;
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  li {
+    margin: 12px 0;
+  }
+
+  p {
+    margin: 24px 0;
+    line-height: 1.6;
+  }
+
+  a {
+    @include link-styles;
+  }
+
+  blockquote {
+    margin: 0;
+    border-color: var(--color-light-gray);
+    border: 0;
+    border-left-width: 3px;
+    border-style: solid;
+    background-color: var(--color-dark-light);
+    padding: 2px 12px;
+  }
+}

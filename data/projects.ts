@@ -2,7 +2,7 @@ export default [
   {
     title: 'Steller CSS',
     description:
-      'A Sass-based, utility-first CSS framework with a powerful grid system.',
+      'A Sass-based, utility-first CSS framework with a powerful grid system',
     href: 'https://github.com/tjhillard/steller-css',
     image: {
       src:
@@ -13,8 +13,7 @@ export default [
   },
   {
     title: 'JSON:API Deserialize',
-    description:
-      'Massively simplifies the process of working with JSON:API data on the frontend.',
+    description: 'A JavaScript deserializer for raw JSON:API responses',
     href: 'https://github.com/tjhillard/json-api-deserialize',
     image: {
       src:
@@ -23,4 +22,4 @@ export default [
     },
     badge: 'https://img.shields.io/npm/dt/json-api-deserialize.svg',
   },
-]
+];

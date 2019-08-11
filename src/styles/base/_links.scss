@@ -1,13 +1,20 @@
-.link {
+@mixin link-styles {
   text-decoration: none;
   cursor: pointer;
   color: var(--theme-link-color);
+  border-color: var(--theme-link-underline-color);
+
+  &:not(.no-underline) {
+    border-width: 0 0 2px 0;
+    border-style: dashed;
+  }
 
   &:hover {
     border-width: 0 0 2px 0;
     border-style: dashed;
-    border-color: var(--theme-link-underline-color);
-    color: var(--color-black);
+    color: var(--theme-link-hover-color);
+    border-color: var(--theme-link-underline-hover-color);
+    transition: border-style var(--speed-extra-slow) linear;
   }
 
   &:visited {
@@ -16,6 +23,7 @@
 
   &.gradient {
     color: var(--theme-link-color);
+    border-width: 0px;
     background: linear-gradient(
       to right,
       var(--color-primary),
@@ -32,7 +40,6 @@
   }
 }
 
-a.no-style {
-  color: var(--theme-link-color);
-  text-decoration: none;
+.link {
+  @include link-styles;
 }

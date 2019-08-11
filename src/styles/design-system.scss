@@ -5,7 +5,7 @@ $steller-colors: (
   'dark-light': #2d3847,
   'dark-lighgter': #3a4555,
   'gray': #4a5568,
-  'light-gray': #f2f2f2,
+  'light-gray': #f2f2f2ee,
   'primary': #55c1ff,
   'secondary': #5863f8,
 );
@@ -41,6 +41,10 @@ $steller-font-families: (
   'secondary': 'Geomanist',
   'primary': (
     'Nanum Gothic',
+    sans-serif,
+  ),
+  'body': (
+    'IBM Plex Sans',
     sans-serif,
   ),
 );

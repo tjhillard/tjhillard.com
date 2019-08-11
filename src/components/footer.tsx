@@ -12,8 +12,12 @@ export class Footer extends React.Component<Props> {
         <div className="container flex justify-between">
           <div>© {this.props.author} 2019</div>
           <div>
-            <a href="#" className="link mx-sm">
-              View Source
+            <a
+              href="https://github.com/tjhillard/tjhillard.com"
+              target="_blank"
+              className="link no-underline mx-sm"
+            >
+              view source
             </a>
           </div>
         </div>

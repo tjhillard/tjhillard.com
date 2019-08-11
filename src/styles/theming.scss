@@ -3,7 +3,9 @@
   --theme-bg-color: var(--color-white);
   --theme-text-color: var(--color-black);
   --theme-link-color: var(--color-black);
+  --theme-link-hover-color: var(--color-dark-light);
   --theme-link-underline-color: var(--color-black);
+  --theme-link-underline-hover-color: var(--color-primary);
   --theme-card-hover-bg-color: var(--color-light-gray);
   --theme-footer-text-color: var(--color-dark-light);
   --theme-nav-scroll-progress-bar: var(--color-primary);
@@ -13,8 +15,10 @@
 body.dark {
   --theme-bg-color: var(--color-dark);
   --theme-text-color: var(--color-white);
-  --theme-link-color: lighten(var(--color-gray), 10%);
-  --theme-link-underline-color: var(--color-gray-light);
+  --theme-link-color: var(--color-light-gray);
+  --theme-link-hover-color: var(--color-white);
+  --theme-link-underline-color: var(--color-dark-light);
+  --theme-link-underline-hover-color: var(--color-secondary);
   --theme-card-hover-bg-color: var(--color-dark-light);
   --theme-footer-text-color: var(--color-light-gray);
   --theme-nav-scroll-progress-bar: var(--color-secondary);
@@ -23,4 +27,8 @@ body.dark {
 body {
   background-color: var(--theme-bg-color);
   color: var(--theme-text-color);
+
+  ::selection {
+    background: var(--color-primary);
+  }
 }

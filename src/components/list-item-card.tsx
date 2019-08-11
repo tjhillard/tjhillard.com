@@ -33,7 +33,11 @@ export default class ListItemCard extends React.Component<
 
   render() {
     if (this.props.linkTo) {
-      return <Link to={this.props.linkTo}>{cardContent(this.props)}</Link>;
+      return (
+        <Link to={this.props.linkTo} className="link no-underline">
+          {cardContent(this.props)}
+        </Link>
+      );
     }
     if (this.props.href) {
       return (

@@ -17,8 +17,8 @@ export default class ThemeToggler extends React.Component<Props, State> {
   render() {
     return (
       <span className="cursor-pointer user-select-none">
-        <span className="p-sm rounded-sm" onClick={() => this.toggleTheme()}>
-          <span>{this.emoji}</span>
+        <span onClick={() => this.toggleTheme()}>
+          <>{this.emoji}</>
         </span>
       </span>
     );

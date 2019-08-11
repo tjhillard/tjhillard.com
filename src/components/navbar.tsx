@@ -31,7 +31,7 @@ export class Navbar extends React.Component<Props> {
         <div className="container w-full py-sm">
           <div className="flex justify-between items-center py-xs">
             <span className="letter-spacing-wide">
-              <Link to="/" className="link pr-sm">
+              <Link to="/" className="link no-underline mr-sm">
                 <span className="font-family-secondary font-size-lg md:font-size-2xl">
                   {this.props.author}
                 </span>
@@ -41,12 +41,12 @@ export class Navbar extends React.Component<Props> {
             <div className="links font-size-sm md:font-size-md">
               <Link
                 to="/blog"
-                className="font-family-primary ml-lg link font-weight-bold uppercase"
+                className="font-family-primary ml-lg link no-underline font-weight-bold"
               >
-                Blog
+                <span>blog</span>
               </Link>
 
-              <span className="ml-lg mr-md">
+              <span className="mx-md">
                 <ThemeToggler />
               </span>
             </div>
