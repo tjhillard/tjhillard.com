@@ -1,5 +1,6 @@
 ---
 title: 'New Site!'
+description: "I've made a new personal site & blog! 🎉"
 date: '2019-08-10'
 headerImage: 'mountain_1.jpg'
 thumbnailImageUrl: 'https://storage.googleapis.com/tjhillard.com/thumbnails/tada.png'

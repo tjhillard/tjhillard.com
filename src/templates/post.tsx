@@ -9,13 +9,27 @@ import Helmet from 'react-helmet';
 interface Props {
   data: {
     markdownRemark: {
-      frontmatter: { title: string; date: string; headerImage: string };
+      frontmatter: {
+        title: string;
+        date: string;
+        headerImage: string;
+        description: string;
+      };
       fields: { slug: string };
       html: string;
     };
     file: {
       childImageSharp: {
         fluid: FluidObject;
+        src: string;
+      };
+    };
+    site: {
+      siteMetadata: {
+        author: string;
+        title: string;
+        description: string;
+        url: string;
       };
     };
   };
@@ -31,6 +45,44 @@ export default class PostTemplate extends React.Component<Props> {
       <Layout>
         <Helmet>
           <title>{this.props.data.markdownRemark.frontmatter.title}</title>
+          <meta
+            name="description"
+            content={this.props.data.markdownRemark.frontmatter.description}
+          />
+          <meta
+            name="image"
+            content={this.props.data.file.childImageSharp.fluid.src}
+          />
+          <meta
+            property="og:title"
+            content={this.props.data.markdownRemark.frontmatter.title}
+          />
+          <meta
+            property="og:url"
+            content={this.props.data.site.siteMetadata.url}
+          />
+          <meta
+            property="og:description"
+            content={this.props.data.markdownRemark.frontmatter.description}
+          />
+          <meta
+            property="og:image"
+            content={this.props.data.file.childImageSharp.fluid.src}
+          />
+          <meta
+            name="twitter:title"
+            content={this.props.data.markdownRemark.frontmatter.title}
+          />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@_tjhillard" />
+          <meta
+            name="twitter:description"
+            content={this.props.data.markdownRemark.frontmatter.description}
+          />
+          <meta
+            name="twitter:image"
+            content={this.props.data.file.childImageSharp.fluid.src}
+          />
         </Helmet>
 
         <h1 style={{ margin: '0' }}>
@@ -86,6 +138,7 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        description
         date
         headerImage
       }
@@ -98,7 +151,16 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 800, quality: 70) {
           ...GatsbyImageSharpFluid
+          src
         }
+      }
+    }
+    site {
+      siteMetadata {
+        url
+        description
+        author
+        title
       }
     }
   }

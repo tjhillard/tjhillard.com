@@ -3,6 +3,10 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     author: 'TJ Hillard',
+    title: 'tjhillard.com',
+    url: 'http://tjhillard.com',
+    description: 'TJ Hillard is a Software Engineer in Seattle, Washington.',
+    image: '/computer.jpg',
   },
   plugins: [
     'gatsby-plugin-sass',
