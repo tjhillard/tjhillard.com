@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/index.scss';
 import Application from '../application';
-import Navbar from '../components/navbar';
-import Footer from '../components/footer';
+import Navbar from '../components/application/navbar';
+import Footer from '../components/application/footer';
 
 export default class MainLayout extends React.Component {
   render() {

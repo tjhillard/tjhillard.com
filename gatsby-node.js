@@ -21,6 +21,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
       allMarkdownRemark {
         edges {
           node {
+            frontmatter {
+              headerImage
+            }
             fields {
               slug
             }
@@ -36,6 +39,11 @@ module.exports.createPages = async ({ graphql, actions }) => {
       path: `/posts/${edge.node.fields.slug}`,
       context: {
         slug: edge.node.fields.slug,
+        headerImagePath: path.join(
+          __dirname,
+          'images/',
+          edge.node.frontmatter.headerImage
+        ),
       },
     });
   });

@@ -2,10 +2,16 @@ import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import projects from '../../data/projects';
 import Layout from '../layouts/main';
-import ListCardItem from '../components/list-item-card';
+import ListCardItem from '../components/base/list-item-card';
+import { asVerbose } from '../services/dates.service';
 
 interface Props {
-  posts: { title: string; date: string; thumbnail: string; slug: string }[];
+  posts: {
+    title: string;
+    date: string;
+    slug: string;
+    thumbnailImageUrl: string;
+  }[];
 }
 
 export class IndexPage extends React.Component<Props> {
@@ -19,11 +25,11 @@ export class IndexPage extends React.Component<Props> {
           className="font-weight-thin font-size-xl"
           style={{ lineHeight: '2.5rem' }}
         >
-          I'm a Full Stack Software Engineer at{' '}
+          I'm a Software Engineer at{' '}
           <a href="#" className="link gradient">
             Snap! Raise
           </a>{' '}
-          in Seattle, Washington. I enjoy modern JavaScript, UI development,
+          in Seattle, Washington. I focus on modern JavaScript, UI development,
           design systems, software architecture, and DX tooling.
         </p>
 
@@ -59,22 +65,20 @@ export class IndexPage extends React.Component<Props> {
               key={post.title}
               linkTo={`/posts/${post.slug}`}
               title={post.title}
-              description={post.date}
+              description={asVerbose(post.date)}
               image={{
-                src: post.thumbnail,
-                alt: `${post.title} thumbnail`,
+                src: post.thumbnailImageUrl,
+                alt: '',
               }}
             />
           ))}
         </section>
 
-        <div className="mt-lg">
+        <div className="mt-lg mb-3xl">
           <Link to="/blog" className="link">
             view more
           </Link>
         </div>
-
-        <div style={{ height: '2000px' }}></div>
       </Layout>
     );
   }
@@ -93,7 +97,7 @@ export default () => (
               frontmatter {
                 title
                 date
-                thumbnail
+                thumbnailImageUrl
               }
               fields {
                 slug
@@ -108,7 +112,7 @@ export default () => (
         posts={data.allMarkdownRemark.edges.map(edge => ({
           title: edge.node.frontmatter.title,
           date: edge.node.frontmatter.date,
-          thumbnail: edge.node.frontmatter.thumbnail,
+          thumbnailImageUrl: edge.node.frontmatter.thumbnailImageUrl,
           slug: edge.node.fields.slug,
         }))}
       />

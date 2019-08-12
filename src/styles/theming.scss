@@ -9,6 +9,9 @@
   --theme-card-hover-bg-color: var(--color-light-gray);
   --theme-footer-text-color: var(--color-dark-light);
   --theme-nav-scroll-progress-bar: var(--color-primary);
+  --theme-muted-text-color: var(--color-gray);
+  --theme-code-block-background: var(--color-dark-light);
+  --theme-code-block-filename-background: var(--color-gray);
 }
 
 // Dark Theme
@@ -22,6 +25,9 @@ body.dark {
   --theme-card-hover-bg-color: var(--color-dark-light);
   --theme-footer-text-color: var(--color-light-gray);
   --theme-nav-scroll-progress-bar: var(--color-secondary);
+  --theme-muted-text-color: var(--color-gray);
+  --theme-code-block-background: var(--color-dark-light);
+  --theme-code-block-filename-background: var(--color-black);
 }
 
 body {
@@ -31,4 +37,8 @@ body {
   ::selection {
     background: var(--color-primary);
   }
+}
+
+.muted {
+  color: var(--theme-muted-text-color);
 }
