@@ -31,4 +31,6 @@ This site is built with:
 
 I know, [software is supposed to be boring](https://tqdev.com/2018-the-boring-software-manifesto), and one is not supposed to get excited and glorify shiny new tech such as my above list, but I must say, this is my first time using Gatsby, and it has been an absolute pleasure to work with. Having used Nuxt & Next before, _and having good experiences with each_, the Gatsby ecosystem seems signifigantly more mature (at least at the time of writing this). Using TypeScript is a breeze, documentation is robust, community tutorials and guides are abundant, and "weird errors" are rarely experienced. In fact, I haven't had to resort to copy pasting a single error message into Google yet, which to me, is a pretty good indicator.
 
-Anyway, thanks for checking out my new site! 👋
+React & TypeScript for my JavaScript stack (I really love TypeScript, and if you work with me you already know that), GraphQL for the Gatsby data layer, my own, [Steller CSS](https://github.com/tjhillard/steller-css) for the CSS framework, Netlify for hosting and analytics, and finally, Google Cloud Platform for data storage.
+
+Thanks for taking the time to check out my new site! If you're interested in viewing the source code, it's all open source [on my GitHub](https://github.com/tjhillard/tjhillard.com). Feel free to drop a follow or a star while you're there. 😉

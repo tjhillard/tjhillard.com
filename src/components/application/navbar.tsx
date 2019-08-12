@@ -46,7 +46,7 @@ export class Navbar extends React.Component<Props> {
                 <span>blog</span>
               </Link>
 
-              <span className="mx-md">
+              <span className="mx-md pr-sm">
                 <ThemeToggler />
               </span>
             </div>
@@ -64,9 +64,7 @@ export class Navbar extends React.Component<Props> {
   private updateScrollProgressBar() {
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
+    const height = document.documentElement.scrollHeight - window.innerHeight;
     const scrolled = (winScroll / height) * 100;
     const bar = this.scrollProgressBarRef.current;
     bar.style.width = scrolled + '%';

@@ -96,8 +96,8 @@ export const query = graphql`
     }
     file(absolutePath: { eq: $headerImagePath }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 100, traceSVG: { color: "#2d3847" }) {
-          ...GatsbyImageSharpFluid_tracedSVG
+        fluid(maxWidth: 800, quality: 70) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
