@@ -26,7 +26,11 @@ export class IndexPage extends React.Component<Props> {
           style={{ lineHeight: '2.5rem' }}
         >
           I'm a Software Engineer at{' '}
-          <a href="#" className="link gradient">
+          <a
+            href="http://snap-raise.com"
+            className="link gradient"
+            target="_blank"
+          >
             Snap! Raise
           </a>{' '}
           in Seattle, Washington. I focus on modern JavaScript, UI development,
