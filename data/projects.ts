@@ -5,8 +5,7 @@ export default [
       'A Sass-based, utility-first CSS framework with a powerful grid system',
     href: 'https://github.com/tjhillard/steller-css',
     image: {
-      src:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhdII2ZTUyYSS1qKpal-UFM9-vzHQdY030FQM3Gs7vZHHNomzd',
+      src: 'https://storage.googleapis.com/tjhillard.com/thumbnails/css3.png',
       alt: 'CSS Logo',
     },
     badge: 'https://img.shields.io/npm/dt/steller-css.svg',

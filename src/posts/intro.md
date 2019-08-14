@@ -4,6 +4,7 @@ description: "I've made a new personal site & blog! 🎉"
 date: '2019-08-10'
 headerImage: 'mountain_1.jpg'
 thumbnailImageUrl: 'https://storage.googleapis.com/tjhillard.com/thumbnails/tada.png'
+live: true
 ---
 
 🎊 **I've got a new personal site!** 🍾 Fully equipped with a blog, where I plan on writing about topics such as:

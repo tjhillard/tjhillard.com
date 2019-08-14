@@ -32,34 +32,41 @@
     border: 0;
     border-left-width: 3px;
     border-style: solid;
-    background-color: var(--color-dark-light);
+    background-color: var(--theme-blockquote-background);
+    color: var(--color-light-gray);
     padding: 2px 12px;
   }
-}
 
-pre[class*='language-'] {
-  background-color: var(--theme-code-block-background);
-  padding: 1em;
-  margin: 0;
-  border-radius: var(--border-radius-sm);
+  pre[class*='language-'] {
+    background-color: var(--theme-code-block-background);
+    padding: 1em;
+    margin: 0;
+    border-radius: var(--border-radius-sm);
 
-  .function-variable,
-  .function {
-    color: var(--color-primary);
+    .function-variable,
+    .function {
+      color: var(--color-primary);
+    }
   }
-}
 
-.filename {
-  font-size: 1.1rem;
-  color: var(--color-white);
-  padding: 10px 0px 10px 12px;
-  margin: 0 5px;
-  background-color: var(--theme-code-block-filename-background);
-  border-top-left-radius: var(--border-radius-sm);
-  border-top-right-radius: var(--border-radius-sm);
-  font-family: var(--font-family-secondary);
+  .filename {
+    font-size: 1.1rem;
+    color: var(--color-white);
+    padding: 10px 0px 10px 12px;
+    margin: 0 5px;
+    background-color: var(--theme-code-block-filename-background);
+    border-top-left-radius: var(--border-radius-sm);
+    border-top-right-radius: var(--border-radius-sm);
+    font-family: var(--font-family-secondary);
+  }
+
+  .language-text {
+    color: var(--theme-highlighted-text-color);
+    background-color: var(--theme-highlighted-text-background);
+  }
 }
 
 #disqus_thread {
+  padding-top: 64px;
   width: 100%;
 }

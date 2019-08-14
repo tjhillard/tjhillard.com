@@ -33,8 +33,8 @@ export class IndexPage extends React.Component<Props> {
           >
             Snap! Raise
           </a>{' '}
-          in Seattle, Washington. I focus on modern JavaScript, UI development,
-          design systems, software architecture, and DX tooling.
+          in Seattle, Washington. I love all things UI development, JavaScript,
+          Design Systems, and UX.
         </p>
 
         <h2 className="mt-3xl">projects</h2>
@@ -94,7 +94,8 @@ export default () => (
       query {
         allMarkdownRemark(
           limit: 3
-          sort: { fields: frontmatter___date, order: ASC }
+          sort: { fields: frontmatter___date, order: DESC }
+          filter: { frontmatter: { live: { eq: true } } }
         ) {
           edges {
             node {

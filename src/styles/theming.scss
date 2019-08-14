@@ -12,6 +12,9 @@
   --theme-muted-text-color: var(--color-gray);
   --theme-code-block-background: var(--color-dark-light);
   --theme-code-block-filename-background: var(--color-gray);
+  --theme-blockquote-background: var(--color-dark-light);
+  --theme-highlighted-text-background: var(--color-light-gray);
+  --theme-highlighted-text-color: var(--color-dark-light);
 }
 
 // Dark Theme
@@ -28,6 +31,9 @@ body.dark {
   --theme-muted-text-color: var(--color-gray);
   --theme-code-block-background: var(--color-dark-light);
   --theme-code-block-filename-background: var(--color-black);
+  --theme-blockquote-background: var(--color-dark-light);
+  --theme-highlighted-text-background: var(--color-gray);
+  --theme-highlighted-text-color: var(--color-light-gray);
 }
 
 body {

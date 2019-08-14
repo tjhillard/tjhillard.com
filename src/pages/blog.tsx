@@ -41,7 +41,10 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allMarkdownRemark {
+        allMarkdownRemark(
+          sort: { fields: frontmatter___date, order: DESC }
+          filter: { frontmatter: { live: { eq: true } } }
+        ) {
           edges {
             node {
               frontmatter {
