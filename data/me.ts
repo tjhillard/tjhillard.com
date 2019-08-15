@@ -109,7 +109,7 @@ export const PLACESS_OF_EMPLOYMENT = [
         ],
       },
       {
-        title: 'Software Development Engineer in Test (SDET)',
+        title: 'Software Engineer in Test',
         startDate: 'Feb 2018',
         endDate: 'Aug 2018',
         bullets: [

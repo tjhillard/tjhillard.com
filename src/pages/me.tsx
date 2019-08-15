@@ -15,7 +15,7 @@ export default class BlogPage extends React.Component {
 
         <section className="grid">
           {TOP_SKILLS.map(skill => (
-            <div className="flex mb-md col-12 md:col-6">
+            <div key={skill.name} className="flex mb-md col-12 md:col-6">
               <img
                 src={skill.image}
                 alt={skill.name}
@@ -35,7 +35,10 @@ export default class BlogPage extends React.Component {
 
         <section className="grid mt-xl">
           {SKILLS.map(skill => (
-            <div className="col-6 md:col-4 flex mb-md items-center">
+            <div
+              key={skill.name}
+              className="col-6 md:col-4 flex mb-md items-center"
+            >
               <img
                 src={skill.image}
                 alt={skill.name}
@@ -49,7 +52,7 @@ export default class BlogPage extends React.Component {
         <h2 className="mt-3xl">recommendations</h2>
 
         {RECOMMENDATIONS.map(recommendation => (
-          <div>
+          <div key={recommendation.name}>
             <div className="flex mb-md col-12 md:col-6">
               <img
                 src={recommendation.image}
@@ -66,8 +69,8 @@ export default class BlogPage extends React.Component {
               </div>
             </div>
 
-            {recommendation.message.map(paragraph => (
-              <p>{paragraph}</p>
+            {recommendation.message.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
             ))}
           </div>
         ))}
@@ -76,7 +79,7 @@ export default class BlogPage extends React.Component {
 
         <section className="grid">
           {PLACESS_OF_EMPLOYMENT.map(company => (
-            <div className="col-12">
+            <div key={company.name} className="col-12">
               <div className="flex mb-md">
                 <img
                   src={company.logo}
@@ -93,15 +96,15 @@ export default class BlogPage extends React.Component {
 
               <div className="pt-sm">
                 {company.positions.map(position => (
-                  <div>
-                    <div className="flex justify-between items-center">
+                  <div key={position.title}>
+                    <div className="flex justify-between flex-col md:flex-row md:items-center">
                       <h3>{position.title}</h3>
                       <div className="font-size-sm">
                         {position.startDate} - {position.endDate}
                       </div>
                     </div>
 
-                    <ul>
+                    <ul className="pt-md">
                       {position.bullets.map(bullet => (
                         <li className="my-sm leading-md font-family-body">
                           {bullet}
