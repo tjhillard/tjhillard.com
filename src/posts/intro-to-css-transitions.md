@@ -45,7 +45,7 @@ Now, before we dive into the how to actually implement transitions, it is import
 
 > The state of being full of life or vigor; liveliness.
 
-A pretty common thing I hear, is people interchangeably using "animation" to mean "transition" and vice versa. It is important to understand that, although similar, they are not the same concept, generally, and within the context of web development. An animation is defined and then programatically initiated via JavaScript. It can be started, stopped, paused, looped, etc. Wheras a transition is defined, and that's it, the browser handles the rest. An element's state changes and the defined transitions determines how state changes.
+A pretty common thing I hear, is people interchangeably using "animation" to mean "transition" and vice versa. It is important to understand that, although similar, they are not the same concept, generally, and within the context of web development. An animation is defined and then programatically initiated. It can be started, stopped, paused, looped, etc. Wheras a transition is defined, and that's it, the browser handles the rest. An element's state changes and the defined transitions determines how state changes.
 
 Alright, let's move on the to fun stuff!
 
@@ -92,7 +92,9 @@ Just like `transition-duration`, `transition-delay` is a a Time value and determ
 
 ### Transition Timing Function
 
-Intentionally saved for last, this one of the four has the most to sink your teeth into and learn. This argument, also commonly referred to as an "Easing Function", takes a `<timing-function>` type as its value. There are several possible values, some are plain `keywords`, and others `functions`.
+In real life, when things move, they don't instantaneously start or stop, they start slow and speed up or start fast and slow down, etc. Timing Functions, also commonly referred to as "Easing Functions", allow us to simulate this natural movement for our transitions.
+
+This property takes a `<timing-function>` as its value. There are several possible timing function values, some are `functions` others are `keywords`.
 
 ### Functions
 
@@ -110,3 +112,5 @@ Intentionally saved for last, this one of the four has the most to sink your tee
 - `step-end`
 
 ## Cubic Bezier
+
+Generally speaking, the way in which something goes from point A to point B, is referred to as **Interpolation**.

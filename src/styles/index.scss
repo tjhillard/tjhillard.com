@@ -49,6 +49,7 @@ h2 {
 
 p {
   line-height: 1.5rem;
+  font-family: font-family('body');
 }
 
 .main {
@@ -65,4 +66,8 @@ p {
 
 .font-family-secondary {
   font-family: font-family('secondary');
+}
+
+.font-family-body {
+  font-family: font-family('body');
 }
