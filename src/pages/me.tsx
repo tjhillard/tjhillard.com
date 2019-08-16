@@ -105,8 +105,11 @@ export default class BlogPage extends React.Component {
                     </div>
 
                     <ul className="pt-md">
-                      {position.bullets.map(bullet => (
-                        <li className="my-sm leading-md font-family-body">
+                      {position.bullets.map((bullet, index) => (
+                        <li
+                          key={index}
+                          className="my-sm leading-md font-family-body"
+                        >
                           {bullet}
                         </li>
                       ))}
@@ -125,8 +128,7 @@ export default class BlogPage extends React.Component {
           I took when I was in the 6th grade. Motivated to learn more over the
           summer after that class ended, I went to the bookstore and picked up a
           HTML for Dummies book. To this day, I still remember reading about the
-          &lt;blink> element and thinking it was the coolest thing ever (gone
-          but not forgotten).
+          &lt;blink> HTML element and thinking it was the coolest thing ever.
         </p>
 
         <p className="leading-md">
@@ -146,17 +148,9 @@ export default class BlogPage extends React.Component {
           love of coding that I still have to do this day.
         </p>
 
-        <h2>non-work stuff</h2>
-
-        <h3>favorite music?</h3>
-        <p>
-          I love music. My favorite genres at the moment are house & drum and
-          bass.
-        </p>
-
         <h3>favorite hobbies?</h3>
         <p>
-          Gaming, traveling, hiking, reading, chillin with my cat and fiancé
+          Traveling, hiking, reading, chillin with my cat and fiancé, gaming
         </p>
 
         <h3>favorite sports team?</h3>
@@ -164,6 +158,9 @@ export default class BlogPage extends React.Component {
 
         <h3>favorite movie?</h3>
         <p>Monty Python and the Holy Grail</p>
+
+        <h3>favorite music?</h3>
+        <p>My favorite genres at the moment are house & drum and bass.</p>
 
         <h3>favorite video game?</h3>
         <p>Tie between Halo 2 and Age of Empires 2</p>

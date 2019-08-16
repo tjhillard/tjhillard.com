@@ -103,7 +103,6 @@ export const PLACESS_OF_EMPLOYMENT = [
           'Led initiative to introduce an internal design system focused on application development across all products; wrote and maintain design system documentation and training on the topic',
           'Key contributor to our reusable Vue.js component library, making decisions on API design and patterns used',
           'Work closely with designers and product managers to convert designs into functional and maintainable software for the company’s highest priority initiatives',
-          'Wrote over 90% of our front-end unit tests',
           'Perform frequent code reviews, share ideas and resources with junior developers, organize after-work trips to local meetups, and presented several lunch and learn discussions',
           'Consistently recognized with company-wide awards for showing initiative and being a team-player',
         ],
