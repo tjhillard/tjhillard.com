@@ -13,11 +13,11 @@ export class Footer extends React.Component<Props> {
           <div>© {this.props.author} 2019</div>
           <div>
             <a
-              href="https://github.com/tjhillard/tjhillard.com"
+              href="https://github.com/tjhillard"
               target="_blank"
               className="link no-underline mx-sm"
             >
-              view source
+              github
             </a>
           </div>
         </div>

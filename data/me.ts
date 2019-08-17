@@ -166,3 +166,32 @@ export const PLACESS_OF_EMPLOYMENT = [
     ],
   },
 ];
+
+export const OPEN_SOURCE_CONTRIBUTIONS = [
+  {
+    pullRequest: 'https://github.com/typeorm/typeorm/pull/3612',
+    project: 'TypeORM',
+  },
+  {
+    pullRequest: 'https://github.com/enquirer/enquirer/pull/204',
+    project: 'Enquirer',
+  },
+];
+
+export const CODE_SAMPLES = [
+  {
+    url: 'https://github.com/tjhillard/tjhillard.com',
+    name: 'My personal site/blog',
+    tech: 'Gatsby, React, TypeScript, Sass',
+  },
+  {
+    url: 'https://github.com/tjhillard/nestjs-todos-api',
+    name: 'Nest.js Todos API',
+    tech: 'Nest.js, TypeScript, TypeORM, JWT',
+  },
+  {
+    url: 'https://github.com/tjhillard/steller-css',
+    name: 'StellerCSS',
+    tech: 'Sass, Jest',
+  },
+];

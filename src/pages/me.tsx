@@ -5,6 +5,7 @@ import {
   SKILLS,
   PLACESS_OF_EMPLOYMENT,
   RECOMMENDATIONS,
+  OPEN_SOURCE_CONTRIBUTIONS,
 } from '../../data/me';
 
 export default class BlogPage extends React.Component {
@@ -74,6 +75,39 @@ export default class BlogPage extends React.Component {
             ))}
           </div>
         ))}
+
+        <h2 className="mt-3xl">open-source contributions</h2>
+
+        <ul>
+          {OPEN_SOURCE_CONTRIBUTIONS.map(contribution => (
+            <>
+              <li className="my-md">
+                <a
+                  className="link"
+                  href={contribution.pullRequest}
+                  target="_blank"
+                >
+                  {contribution.project}
+                </a>
+              </li>
+            </>
+          ))}
+          <li>More to come soon!</li>
+        </ul>
+
+        <h2 className="mt-3xl">code samples</h2>
+
+        <p>
+          Check out my{' '}
+          <a
+            className="link"
+            href="http://github.com/tjhillard"
+            target="_blank"
+          >
+            Github
+          </a>
+          !
+        </p>
 
         <h2 className="mt-3xl">experience</h2>
 

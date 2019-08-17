@@ -54,7 +54,7 @@ Alright, let's move on the to fun stuff!
 A CSS Transition is made up of just 4 properties.
 
 - A CSS property name to transition (default: `all`)
-- A duration for the transition (default: `0s`)
+- A duration (default: `0s`)
 - A timing function (default: `ease`)
 - A delay for initiating the transition (default: `0s`)
 
