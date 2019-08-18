@@ -5201,14 +5201,6 @@ gatsby-plugin-disqus@^1.1.2:
     babel-preset-gatsby-package "^0.1.2"
     cross-env "^5.2.0"
 
-gatsby-plugin-nprogress@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.1.2.tgz#dd973e428e43ee1a8fbf336967e31dfe835d4777"
-  integrity sha512-nWnA4O1XUChf25j8H05lLPdVB6MF+BEQiuSL/K9TI8LVZRQxjRIsijCDGzvtR02dvp/bAi9ftJE1LRP/yS/qpQ==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    nprogress "^0.2.0"
-
 gatsby-plugin-page-creator@^2.1.5:
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.1.5.tgz#723fc0392a67978cab649a402ad88f6f06b74e4c"
@@ -8374,11 +8366,6 @@ npm-run-path@^2.0.0:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
-nprogress@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
-  integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
-
 nth-check@^1.0.1, nth-check@^1.0.2, nth-check@~1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
@@ -11213,10 +11200,10 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
-steller-css@^1.0.0-alpha.6:
-  version "1.0.0-alpha.6"
-  resolved "https://registry.yarnpkg.com/steller-css/-/steller-css-1.0.0-alpha.6.tgz#6dfd4debb3ba507424c563c8b823c0f36280f274"
-  integrity sha512-VrLI0BpT7MRFveQp3oIws4qpTX1bFKDrVZJdAYVfID5Y+CCcXNh2uHHx9h0HZtSGGP3vY9HARVFzZnz3jb4F7A==
+steller-css@^1.0.0-beta.0:
+  version "1.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/steller-css/-/steller-css-1.0.0-beta.0.tgz#278d605c7af2051ae6504f904ae4be60c5f2e70d"
+  integrity sha512-YlVl7oeZnVag+PEySR4nPPbMqWK3WfZRoAfUCmsOkWiJuQ6rr4u1cDE5F7h3XI9HssDPE/hf4/1mQvGIsoyOVg==
 
 stream-browserify@^2.0.1:
   version "2.0.2"

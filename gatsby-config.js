@@ -12,7 +12,6 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-react-helmet',
     'gatsby-remark-external-links',
-    'gatsby-plugin-nprogress',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
