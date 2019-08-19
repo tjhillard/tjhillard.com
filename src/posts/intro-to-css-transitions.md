@@ -23,14 +23,14 @@ live: false
 
 but by default, CSS applies these style changes _immediately_, and for obvious reasons, this can be jarring for an end user.
 
-<iframe height="239" style="width: 100%;" scrolling="no" title="Introduction to CSS Transitions (1)" src="//codepen.io/tjhillard/embed/XWrmgoa/?height=239&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="239" style="width: 100%;" scrolling="no" title="Introduction to CSS Transitions (1)" src="//codepen.io/tjhillard/embed/XWrmgoa/?height=239&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/tjhillard/pen/XWrmgoa/'>Introduction to CSS Transitions (1)</a> by TJ Hillard
   (<a href='https://codepen.io/tjhillard'>@tjhillard</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 This is where a transition on the `background-color` can makes things smoother.
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Introduction to CSS Transitions (2)" src="//codepen.io/tjhillard/embed/ZEzbJWa/?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="265" style="width: 100%;" scrolling="no" title="Introduction to CSS Transitions (2)" src="//codepen.io/tjhillard/embed/ZEzbJWa/?height=265&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/tjhillard/pen/ZEzbJWa/'>Introduction to CSS Transitions (2)</a> by TJ Hillard
   (<a href='https://codepen.io/tjhillard'>@tjhillard</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -103,7 +103,7 @@ The `cubic-bezier` function in CSS defines a cubic [Bezier Curve](https://en.wik
 
 A cubic bezier curve is made up of four control points: `p0`, `p1`, `p2`, & `p3` on a 1x1 matrix where `p0` is always `(0, 0)` and `p3` is always `(1, 1)`. The matrix's x-axis determines time and the y-axis determines progression.
 
-![Cubic Bezier Curve](https://www.quackit.com/pix/stock/cubic-bezier.gif)
+![Cubic Bezier Curve](https://storage.googleapis.com/tjhillard.com/post_content/Cubic-Bezier.png)
 
 The function takes the `p1` and `p2` (x, y) coordinates in the following syntax:
 

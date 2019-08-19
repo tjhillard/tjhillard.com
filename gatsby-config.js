@@ -17,6 +17,7 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-lazy-load-images`,
+          `gatsby-remark-external-links`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {},
