@@ -4,10 +4,10 @@ description: 'In this article you will learn what CSS Transitions are, how to de
 date: '2019-08-12'
 headerImage: 'falls_1.jpeg'
 thumbnailImageUrl: 'https://storage.googleapis.com/tjhillard.com/thumbnails/css3.png'
-live: false
+live: true
 ---
 
-**CSS Transitions** are a way to define how an element's property should transition from point A to point B. Let's say you want an element to change it's `background-color` when it is hovered over, that's easy to do in CSS.
+**CSS Transitions** are a way to define how an element's property should transition from one state to another. Let's say you want an element to change it's `background-color` when it is hovered over, that's easy to do in CSS.
 
 ```scss
 // Point A
