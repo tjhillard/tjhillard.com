@@ -51,15 +51,13 @@ export default class PostTemplate extends React.Component<Props> {
           />
           <meta
             name="image"
-            content={this.props.data.file.childImageSharp.fluid.src}
+            content={`${this.asImageUrl(
+              this.props.data.file.childImageSharp.fluid.src
+            )}`}
           />
           <meta
             property="og:title"
             content={this.props.data.markdownRemark.frontmatter.title}
-          />
-          <meta
-            property="og:url"
-            content={this.props.data.site.siteMetadata.url}
           />
           <meta
             property="og:description"
@@ -67,7 +65,9 @@ export default class PostTemplate extends React.Component<Props> {
           />
           <meta
             property="og:image"
-            content={this.props.data.file.childImageSharp.fluid.src}
+            content={`${this.asImageUrl(
+              this.props.data.file.childImageSharp.fluid.src
+            )}`}
           />
           <meta
             name="twitter:title"
@@ -81,7 +81,9 @@ export default class PostTemplate extends React.Component<Props> {
           />
           <meta
             name="twitter:image"
-            content={this.props.data.file.childImageSharp.fluid.src}
+            content={`${this.asImageUrl(
+              this.props.data.file.childImageSharp.fluid.src
+            )}`}
           />
         </Helmet>
 
@@ -130,6 +132,10 @@ export default class PostTemplate extends React.Component<Props> {
       identifier: this.props.data.markdownRemark.fields.slug,
       title: this.props.data.markdownRemark.frontmatter.title,
     };
+  }
+
+  private asImageUrl(path) {
+    return `${this.props.data.site.siteMetadata.url}${path}`;
   }
 }
 
