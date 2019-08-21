@@ -1,7 +1,7 @@
 ---
 title: 'An Introduction to CSS Transitions ✨'
 description: 'In this article you will learn what CSS Transitions are, how to define them, and best practices.'
-date: '2019-08-12'
+date: '2019-08-21'
 headerImage: 'falls_1.jpeg'
 thumbnailImageUrl: 'https://storage.googleapis.com/tjhillard.com/thumbnails/css3.png'
 live: true
