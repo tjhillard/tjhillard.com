@@ -28,7 +28,7 @@ export class Navbar extends React.Component<Props> {
   render() {
     return (
       <nav ref={this.navRef} className="nav flex flex-col">
-        <div className="container w-full py-sm">
+        <div className="container w-full">
           <div className="flex justify-between items-center py-xs">
             <span className="letter-spacing-wide">
               <Link to="/" className="link no-underline mr-sm">

@@ -68,6 +68,14 @@ There is also a very convenient shorthand property available for transitions.
 
 The transition property is straight forward. It is simply the element's property you want to apply the transition on. Do you want an element to have a "fade" effect via it's `opacity` property? Then simplly define `opacity` as your `transition-property`.
 
+You can have multiple `transition-properties`.
+
+```scss
+.foo {
+  transition-property: width, height;
+}
+```
+
 It's important to note, it's default value is the keyword, `all`. This applies the transition to every property on an element. It is generally considered a bad practice to use `all` as it has negative performance implications and can result in undesired behavior when new styling is added later on.
 
 ### `transition-duration`
@@ -80,7 +88,7 @@ Just like `transition-duration`, `transition-delay` is a a Time value and determ
 
 ### `transition-timing-function`
 
-In real life, when things move, they don't instantaneously start or stop, they start slow and speed up or start fast and slow down, etc. Timing Functions, also commonly referred to as **Easing Functions**, allow us to simulate natural movement for our transitions.
+In real life, when things move, they don't instantaneously start or stop, they start slow and speed up or start fast and slow down, etc. Timing Functions, also commonly referred to as **Easing Functions**, allow us to simulate natural movement in our transitions.
 
 This property takes a `<timing-function>` as its value. Here are the possible values:
 
@@ -99,9 +107,9 @@ This property takes a `<timing-function>` as its value. Here are the possible va
 
 ## Cubic Bezier
 
-The `cubic-bezier` function in CSS defines a cubic [Bezier Curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve), which determines your transition's progression over time.
+The `cubic-bezier` function in CSS defines a cubic [Bezier Curve](https://en.wikipedia.org/wiki/B%C3%A9zier_curve), which determines your transition's progression over time. If you've ever used Adobe Illustrator, Final Cut Pro, or a similar design/editing application, you've probably already used Bezier Curves.
 
-A cubic bezier curve is made up of four control points: `p0`, `p1`, `p2`, & `p3` on a 1x1 matrix where `p0` is always `(0, 0)` and `p3` is always `(1, 1)`. The matrix's x-axis determines time and the y-axis determines progression.
+A cubic bezier curve is made up of four control points: (`p0`, `p1`, `p2`, `p3`), which live on a 1x1 matrix where `p0` is always `(0, 0)` (initial state) and `p3` is always `(1, 1)` (final state). The x-axis binds **time** and the y-axis binds **progression**.
 
 ![Cubic Bezier Curve](https://storage.googleapis.com/tjhillard.com/post_content/Cubic-Bezier.png)
 
@@ -110,6 +118,8 @@ The function takes the `p1` and `p2` (x, y) coordinates in the following syntax:
 ```scss
 cubic-bezier(p1x, p1y, p2x, p2y);
 ```
+
+Points `p1` and `p2` are known as "Handle Control Points". Their position is what determines the shape of the curve.
 
 Let's take the following example:
 
@@ -131,9 +141,9 @@ The following `cubic-bezier` values are applied to the below Codepen.
   (<a href='https://codepen.io/tjhillard'>@tjhillard</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Notice how the balls travels slighlty further than where you clicked and then corrects as if it actually has momemntum? Pretty cool, right? This is because even though the context of a cubic bezier curve is a 1x1 matrix, `p1` and `p2` values are not required to be within 0 and 1.
+Notice how the balls travels slighlty further than where you clicked and then corrects as if it actually has momemntum? Pretty cool, right? This is because even though the context of a cubic bezier curve is 1x1, the `p1` and `p2` handle control point values are not restricted to be between 0 and 1, like our example where `p2y` is `1.33`.
 
-Feel free to open up the Codepen and play around with how different values behave. [This site](https://cubic-bezier.com) is also a helpful resource for learning.
+Feel free to open up the Codepen and play around with how different values behave. [cubic-bezier.com](https://cubic-bezier.com) is also a helpful resource.
 
 If you're interested having deeper knowledge on how bezier curves work beneath the surface, I highly recommend watching this awesome video by [@pnowelldesign](https://twitter.com/pnowelldesign).
 
@@ -257,7 +267,7 @@ A transition with `linear` progresses from start to finish at the exact same spe
 
 ## Best Practices
 
-Now that we've gone over all of the different timing functions and what they do, let's go over some of the best practices that are vital to know when adding transitions to your application.
+Now that we've gone over all of the different timing functions and what they do, here are some of the best practices for making the most out of your transitions.
 
 - Use `ease-out` for entering elements
 - Use `ease-in` for exiting elements
@@ -265,9 +275,7 @@ Now that we've gone over all of the different timing functions and what they do,
 - Use `ease-in-out` for moving from one position to another
 - When in doubt, use `ease-in-out`
 
-What about speeds? For the majority of transitions, it's best to stay within `100ms` and `500ms`. Transitions that are too fast can be potentially even more jarring to a user than no transition at all, and transitions that are too slow can be seriously annoying. I think we've all seen those sites, usually a marketing site or fancy landing page, with dreadfully slow transitions. Don't be that site.
-
-> Well implemented transitions are like good bassists. If they're doing their job right, the average person doesn't even really notice them.
+What about speeds? The general sweet spot is between `100ms` and `500ms`. Transitions that are too fast can be potentially even more jarring to a user than no transition at all, and transitions that are too slow can be annoying. I think we've all seen those sites, usually a marketing site or fancy landing page, with painfully slow transitions. Don't try to overdo it.
 
 In my projects, I usually have 5 speed variables defined in my base CSS and aim to only use these for all of my transitions in order to enforce consistency.
 
@@ -283,10 +291,11 @@ In my projects, I usually have 5 speed variables defined in my base CSS and aim 
 }
 ```
 
-The three biggest things to remember when trying to choose the right speed:
+A few important things to remember when trying to choose the right speed:
 
 - The **larger** the object, the **slower** the transition should be
 - The **further** the object needs to move, the **slower** the transition should be
+- Elements should exit/dismiss/shrink **faster** than they enter/exapnd/grow
 - If you think the speed you chose is too slow, it probably is
 
 For more best practices and examples, I highly recommend checking out [Material Design's motion documentation](https://material.io/design/motion/speed.html#duration).
