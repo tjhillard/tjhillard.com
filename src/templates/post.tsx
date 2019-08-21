@@ -60,6 +60,10 @@ export default class PostTemplate extends React.Component<Props> {
             content={this.props.data.markdownRemark.frontmatter.title}
           />
           <meta
+            property="og:url"
+            content={this.asPostUrl(this.props.data.markdownRemark.fields.slug)}
+          />
+          <meta
             property="og:description"
             content={this.props.data.markdownRemark.frontmatter.description}
           />
@@ -78,6 +82,10 @@ export default class PostTemplate extends React.Component<Props> {
           <meta
             name="twitter:description"
             content={this.props.data.markdownRemark.frontmatter.description}
+          />
+          <meta
+            property="twitter:url"
+            content={this.asPostUrl(this.props.data.markdownRemark.fields.slug)}
           />
           <meta
             name="twitter:image"
@@ -136,6 +144,10 @@ export default class PostTemplate extends React.Component<Props> {
 
   private asImageUrl(path) {
     return `${this.props.data.site.siteMetadata.url}${path}`;
+  }
+
+  private asPostUrl(slug) {
+    return `${this.props.data.site.siteMetadata.url}/posts/${slug}`;
   }
 }
 
