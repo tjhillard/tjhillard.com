@@ -40,10 +40,10 @@ export class Navbar extends React.Component<Props> {
 
             <div className="links">
               <Link
-                to="/blog"
+                to="/posts"
                 className="font-family-primary ml-lg link no-underline font-weight-bold"
               >
-                <span>blog</span>
+                <span>posts</span>
               </Link>
 
               <span className="mx-md pr-sm">

@@ -1,24 +1,37 @@
 import React, { PropsWithChildren } from 'react';
 import { Link } from 'gatsby';
 
+import PostTag from './post-tag';
+
 interface Props extends PropsWithChildren<any> {
   image?: { src: string; alt: string };
   title: string;
   linkTo?: string;
   href?: string;
-  description?: string;
+  date?: string;
+  tags?: string[];
 }
 
 const cardContent = (props: Props) => (
   <div className="list-item-card flex items-center p-md rounded-md cursor-pointer">
     <img
-      style={{ height: '50px', width: '50px' }}
+      style={{ maxHeight: '50px', maxWidth: '50px' }}
       src={props.image ? props.image.src : null}
       alt={props.image ? props.image.alt : null}
     />
-    <div className="ml-lg flex flex-col justify-center">
-      <span className="font-weight-bold font-size-md block">{props.title}</span>
-      <span className="mt-sm block font-size-sm">{props.description}</span>
+    <div className="ml-lg w-full">
+      <div className="font-weight-bold">{props.title}</div>
+      <div className="">
+        <div className="font-size-xs mt-xs">{props.date}</div>
+        <div className="mt-sm">
+          {props.tags &&
+            props.tags.map(tag => (
+              <span className="mr-xs">
+                <PostTag name={tag} />
+              </span>
+            ))}
+        </div>
+      </div>
       <div>{props.children}</div>
     </div>
   </div>

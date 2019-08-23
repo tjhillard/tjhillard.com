@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import projects from '../../data/projects';
 import Layout from '../layouts/main';
-import ListCardItem from '../components/base/list-item-card';
+import ListItemCard from '../components/application/list-item-card';
 import { asVerbose } from '../services/dates.service';
 
 interface Props {
@@ -41,7 +41,7 @@ export class IndexPage extends React.Component<Props> {
 
         <section>
           {projects.map(project => (
-            <ListCardItem
+            <ListItemCard
               key={project.title}
               href={project.href}
               title={project.title}
@@ -49,9 +49,10 @@ export class IndexPage extends React.Component<Props> {
               image={{ src: project.image.src, alt: project.image.alt }}
             >
               <div className="mt-sm">
+                <div className="mb-sm">{project.description}</div>
                 <img src={project.badge} alt="Project Badge" />
               </div>
-            </ListCardItem>
+            </ListItemCard>
           ))}
         </section>
 
@@ -65,11 +66,11 @@ export class IndexPage extends React.Component<Props> {
 
         <section>
           {this.props.posts.map(post => (
-            <ListCardItem
+            <ListItemCard
               key={post.title}
               linkTo={`/posts/${post.slug}`}
               title={post.title}
-              description={asVerbose(post.date)}
+              date={asVerbose(post.date)}
               image={{
                 src: post.thumbnailImageUrl,
                 alt: '',
@@ -79,7 +80,7 @@ export class IndexPage extends React.Component<Props> {
         </section>
 
         <div className="mt-lg mb-3xl">
-          <Link to="/blog" className="link">
+          <Link to="/posts" className="link">
             view more
           </Link>
         </div>

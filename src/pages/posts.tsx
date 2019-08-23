@@ -1,30 +1,32 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import Layout from '../layouts/main';
-import ListCardItem from '../components/base/list-item-card';
+import ListItemCard from '../components/application/list-item-card';
 import { asVerbose } from '../services/dates.service';
 
 interface Props {
   posts: {
     title: string;
+    tags: string[];
     date: string;
     slug: string;
     thumbnailImageUrl: string;
   }[];
 }
 
-export class BlogPage extends React.Component<Props> {
+export class PostsPage extends React.Component<Props> {
   render() {
     return (
       <Layout>
-        <h1>blog</h1>
+        <h1>posts</h1>
         <section>
           {this.props.posts.map(post => (
-            <ListCardItem
+            <ListItemCard
               key={post.title}
               linkTo={`/posts/${post.slug}`}
               title={post.title}
-              description={asVerbose(post.date)}
+              date={asVerbose(post.date)}
+              tags={post.tags}
               image={{
                 src: post.thumbnailImageUrl,
                 alt: '',
@@ -49,6 +51,7 @@ export default () => (
             node {
               frontmatter {
                 title
+                tags
                 date
                 thumbnailImageUrl
               }
@@ -61,9 +64,10 @@ export default () => (
       }
     `}
     render={data => (
-      <BlogPage
+      <PostsPage
         posts={data.allMarkdownRemark.edges.map(edge => ({
           title: edge.node.frontmatter.title,
+          tags: edge.node.frontmatter.tags,
           date: edge.node.frontmatter.date,
           thumbnailImageUrl: edge.node.frontmatter.thumbnailImageUrl,
           slug: edge.node.fields.slug,

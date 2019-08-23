@@ -8,7 +8,7 @@ import {
   OPEN_SOURCE_CONTRIBUTIONS,
 } from '../../data/me';
 
-export default class BlogPage extends React.Component {
+export default class MePage extends React.Component {
   render() {
     return (
       <Layout>
