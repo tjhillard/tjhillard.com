@@ -8,7 +8,7 @@ thumbnailImageUrl: 'https://storage.googleapis.com/tjhillard.com/thumbnails/css3
 live: true
 ---
 
-**CSS Transitions** are a way to define how an element's property should transition from one state to another. Let's say you want an element to change it's `background-color` when it is hovered over, that's easy to do in CSS.
+**CSS Transitions** are a way to define how an element's property should transition from one state to another. Let's say you want an element to change its `background-color` when it is hovered over, that's easy to do in CSS.
 
 ```scss
 // Point A
@@ -67,7 +67,7 @@ There is also a very convenient shorthand property available for transitions.
 
 ### `transition-property`
 
-The transition property is straight forward. It is simply the element's property you want to apply the transition on. Do you want an element to have a "fade" effect via it's `opacity` property? Then simplly define `opacity` as your `transition-property`.
+The transition property is straight forward. It is simply the element's property you want to apply the transition on. Do you want an element to have a "fade" effect via it's `opacity` property? Then simply define `opacity` as your `transition-property`.
 
 You can have multiple `transition-properties`.
 
@@ -77,7 +77,7 @@ You can have multiple `transition-properties`.
 }
 ```
 
-It's important to note, it's default value is the keyword, `all`. This applies the transition to every property on an element. It is generally considered a bad practice to use `all` as it has negative performance implications and can result in undesired behavior when new styling is added later on.
+It's important to note, its default value is the keyword, `all`. This applies the transition to every property on an element. It is generally considered a bad practice to use `all` as it has negative performance implications and can result in undesired behavior when new styling is added later on.
 
 ### `transition-duration`
 
@@ -85,7 +85,7 @@ This one is also straight forward. How much time do you want the transition to t
 
 ### `transition-delay`
 
-Just like `transition-duration`, `transition-delay` is a a Time value and determines how long the browser should wait before initiating the transition. For what it's worth, in my experience, I can't think of a time where I've needed to use this property, it is usually ommited.
+Just like `transition-duration`, `transition-delay` is a a Time value and determines how long the browser should wait before initiating the transition. For what it's worth, in my experience, I can't think of a time where I've needed to use this property, it is usually omited.
 
 ### `transition-timing-function`
 
@@ -142,7 +142,7 @@ The following `cubic-bezier` values are applied to the below Codepen.
   (<a href='https://codepen.io/tjhillard'>@tjhillard</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-Notice how the balls travels slighlty further than where you clicked and then corrects as if it actually has momemntum? Pretty cool, right? This is because even though the context of a cubic bezier curve is 1x1, the `p1` and `p2` handle control point values are not restricted to be between 0 and 1, like our example where `p2y` is `1.33`.
+Notice how the ball travels slighlty further than where you clicked and then corrects as if it actually has momentum? Pretty cool, right? This is because even though the context of a cubic bezier curve is 1x1, the `p1` and `p2` point values are not restricted to be between 0 and 1, like our example where `p2y` is `1.33`.
 
 Feel free to open up the Codepen and play around with how different values behave. [cubic-bezier.com](https://cubic-bezier.com) is also a helpful resource.
 
@@ -208,7 +208,7 @@ A transition with `ease` will start at a medium speed, speed up in the middle, a
 
 ### Ease In
 
-`ease-in` is equivilent to:
+`ease-in` is equivalent to:
 
 ```scss
 cubic-bezier(0.42, 0, 1.0, 1.0);
@@ -223,7 +223,7 @@ A transition with `ease-in` starts off slow and speeds up until completion.
 
 ### Ease Out
 
-`ease-out` is equivilent to:
+`ease-out` is equivalent to:
 
 ```scss
 cubic-bezier(0, 0, 0.58, 1.0);
@@ -238,7 +238,7 @@ A transition with `ease-out` starts starts off fast and slows down approaching c
 
 ### Ease In-Out
 
-`ease-in-out` is equivilent to:
+`ease-in-out` is equivalent to:
 
 ```scss
 cubic-bezier(0.42, 0, 0.58, 1.0)
@@ -253,7 +253,7 @@ A transition with `ease-in-out` starts off slow, gets faster in the middle, and 
 
 ### Linear
 
-Lastly, `linear` is equivilent to:
+Lastly, `linear` is equivalent to:
 
 ```scss
 cubic-bezier(0.0, 0.0, 1.0, 1.0);
@@ -281,7 +281,7 @@ What about speeds? The general sweet spot is between `100ms` and `500ms`. Transi
 In my projects, I usually have 5 speed variables defined in my base CSS and aim to only use these for all of my transitions in order to enforce consistency.
 
 ```scss
---speed-exra-fast: 100ms;
+--speed-extra-fast: 100ms;
 --speed-fast: 200ms;
 --speed-normal: 300ms;
 --speed-slow: 400ms;
@@ -296,7 +296,7 @@ A few important things to remember when trying to choose the right speed:
 
 - The **larger** the object, the **slower** the transition should be
 - The **further** the object needs to move, the **slower** the transition should be
-- Elements should exit/dismiss/shrink **faster** than they enter/exapnd/grow
+- Elements should exit/dismiss/shrink **faster** than they enter/expand/grow
 - If you think the speed you chose is too slow, it probably is
 
 For more best practices and examples, I highly recommend checking out [Material Design's motion documentation](https://material.io/design/motion/speed.html#duration).
