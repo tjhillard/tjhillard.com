@@ -55,7 +55,7 @@ export class Navbar extends React.Component<Props> {
         <div
           ref={this.scrollProgressBarRef}
           className="scroll-progress-bar"
-          style={{ height: '3px' }}
+          style={{ height: '2px' }}
         ></div>
       </nav>
     );

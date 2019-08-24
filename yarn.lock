@@ -5295,6 +5295,13 @@ gatsby-remark-images@^3.1.10:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.0.1"
 
+gatsby-remark-native-lazy-load@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-native-lazy-load/-/gatsby-remark-native-lazy-load-1.0.0.tgz#143f97843809687b7c5d510f9c5f71ecd31b939e"
+  integrity sha512-WZIQqiYi9wwMotKmupuJhOpDIqNEU2pSXRvJ7NckwMURzIenuhj9PfQgzM8hJhvaAqPKM0MCU6CZ0SDhQVCC+g==
+  dependencies:
+    unist-util-visit "^2.0.0"
+
 gatsby-remark-prismjs@^3.3.5:
   version "3.3.5"
   resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.3.5.tgz#0009a6677543706461516f8ab3e5cdedb9f09bd4"

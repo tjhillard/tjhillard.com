@@ -21,7 +21,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-lazy-load-images`,
+          `gatsby-remark-native-lazy-load`,
           `gatsby-remark-external-links`,
           {
             resolve: `gatsby-remark-prismjs`,

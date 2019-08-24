@@ -21,4 +21,14 @@ export default [
     },
     badge: 'https://img.shields.io/npm/dt/json-api-deserialize.svg',
   },
+  {
+    title: 'Gatsby Remark Native Lazy Load',
+    description: 'Adds native lazy loading to your markdown images',
+    href: 'https://www.npmjs.com/package/gatsby-remark-native-lazy-load',
+    image: {
+      src: 'https://storage.googleapis.com/tjhillard.com/thumbnails/gatsby.png',
+      alt: 'GatsbyJS Logo',
+    },
+    badge: 'https://img.shields.io/npm/dt/gatsby-remark-native-lazy-load.svg',
+  },
 ];
