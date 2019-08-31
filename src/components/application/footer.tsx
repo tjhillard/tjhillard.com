@@ -1,6 +1,8 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 
+import ExternalLink from '../base/external-link';
+
 interface Props {
   author: string;
 }
@@ -12,13 +14,12 @@ export class Footer extends React.Component<Props> {
         <div className="container flex justify-between">
           <div>© {this.props.author} 2019</div>
           <div>
-            <a
+            <ExternalLink
               href="https://github.com/tjhillard"
-              target="_blank"
               className="link no-underline mx-sm"
             >
               github
-            </a>
+            </ExternalLink>
           </div>
         </div>
       </footer>

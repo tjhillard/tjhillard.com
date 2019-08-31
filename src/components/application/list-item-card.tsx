@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import { Link } from 'gatsby';
 
 import PostTag from './post-tag';
+import ExternalLink from '../base/external-link';
 
 interface Props extends PropsWithChildren<any> {
   image?: { src: string; alt: string };
@@ -54,9 +55,9 @@ export default class ListItemCard extends React.Component<
     }
     if (this.props.href) {
       return (
-        <a href={this.props.href} className="link" target="_blank">
+        <ExternalLink href={this.props.href} className="link">
           {cardContent(this.props)}
-        </a>
+        </ExternalLink>
       );
     }
 

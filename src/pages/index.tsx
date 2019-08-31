@@ -4,6 +4,7 @@ import projects from '../../data/projects';
 import Layout from '../layouts/main';
 import ListItemCard from '../components/application/list-item-card';
 import { asVerbose } from '../services/dates.service';
+import ExternalLink from '../components/base/external-link';
 
 interface Props {
   posts: {
@@ -26,13 +27,9 @@ export class IndexPage extends React.Component<Props> {
           style={{ lineHeight: '2.5rem' }}
         >
           I'm a Software Engineer at{' '}
-          <a
-            href="http://snap-raise.com"
-            className="link gradient"
-            target="_blank"
-          >
+          <ExternalLink href="http://snap-raise.com" className="link gradient">
             Snap! Raise
-          </a>{' '}
+          </ExternalLink>{' '}
           in Seattle, Washington. I love all things UI development, JavaScript,
           Design Systems, and UX.
         </p>

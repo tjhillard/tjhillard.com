@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../layouts/main';
+import ExternalLink from '../components/base/external-link';
 import {
   TOP_SKILLS,
   SKILLS,
@@ -82,13 +83,9 @@ export default class MePage extends React.Component {
           {OPEN_SOURCE_CONTRIBUTIONS.map(contribution => (
             <>
               <li className="my-md">
-                <a
-                  className="link"
-                  href={contribution.pullRequest}
-                  target="_blank"
-                >
+                <ExternalLink className="link" href={contribution.pullRequest}>
                   {contribution.project}
-                </a>
+                </ExternalLink>
               </li>
             </>
           ))}
@@ -99,13 +96,9 @@ export default class MePage extends React.Component {
 
         <p>
           Check out my{' '}
-          <a
-            className="link"
-            href="http://github.com/tjhillard"
-            target="_blank"
-          >
+          <ExternalLink className="link" href="http://github.com/tjhillard">
             Github
-          </a>
+          </ExternalLink>
           !
         </p>
 
@@ -170,13 +163,12 @@ export default class MePage extends React.Component {
           bonus CD-ROM), I started my own company and website when I was only 12
           years old. With the money made from this business I was able to
           purchase the old, clunky, plastic,{' '}
-          <a
+          <ExternalLink
             className="link"
             href="https://www.digitaltrends.com/computing/how-the-white-macbook-defined-a-generation/"
-            target="_blank"
           >
             white macbook.
-          </a>{' '}
+          </ExternalLink>{' '}
           Whenever I wasn't playing Age of Empires on my new laptop, I was
           making sites and iOS apps for fun and building the foundation for my
           love of coding that I still have to do this day.
