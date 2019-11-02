@@ -26,12 +26,7 @@ export class IndexPage extends React.Component<Props> {
           className="font-weight-thin font-size-xl"
           style={{ lineHeight: '2.5rem' }}
         >
-          I'm a Software Engineer at{' '}
-          <ExternalLink href="http://snap-raise.com" className="link gradient">
-            Snap! Raise
-          </ExternalLink>{' '}
-          in Seattle, Washington. I love all things UI development, JavaScript,
-          Design Systems, and UX.
+          I'm a UI Engineer at Expedia Group in Seattle, Washington.
         </p>
 
         <h2 className="mt-3xl">projects</h2>
