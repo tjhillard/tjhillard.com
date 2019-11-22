@@ -148,31 +148,7 @@ export default class MePage extends React.Component {
           ))}
         </section>
 
-        <h2 className="mt-xl">about me</h2>
-
-        <p className="leading-md">
-          I've been addicted to coding since my first HTML/Web Design class that
-          I took when I was in the 6th grade. Motivated to learn more over the
-          summer after that class ended, I went to the bookstore and picked up a
-          HTML for Dummies book. To this day, I still remember reading about the
-          &lt;blink> HTML element and thinking it was the coolest thing ever.
-        </p>
-
-        <p className="leading-md">
-          With my new skills picked up from the book (and the super awesome
-          bonus CD-ROM), I started my own company and website when I was only 12
-          years old. With the money made from this business I was able to
-          purchase the old, clunky, plastic,{' '}
-          <ExternalLink
-            className="link"
-            href="https://www.digitaltrends.com/computing/how-the-white-macbook-defined-a-generation/"
-          >
-            white macbook.
-          </ExternalLink>{' '}
-          Whenever I wasn't playing Age of Empires on my new laptop, I was
-          making sites and iOS apps for fun and building the foundation for my
-          love of coding that I still have to do this day.
-        </p>
+        <h2>about me</h2>
 
         <h3>favorite hobbies?</h3>
         <p>

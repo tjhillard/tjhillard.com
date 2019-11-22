@@ -89,6 +89,24 @@ export const RECOMMENDATIONS = [
 
 export const PLACESS_OF_EMPLOYMENT = [
   {
+    name: 'Expedia Group',
+    location: 'Seattle, Washington',
+    logo:
+      'https://storage.googleapis.com/tjhillard.com/thumbnails/expediagroup.png',
+    positions: [
+      {
+        title: 'UI Engineer',
+        startDate: 'October 2019',
+        endDate: 'Present',
+        bullets: [
+          'Identified tech debt and established execution strategy for improving code quality',
+          'Took initiative to significantly improve user experience on high-traffic carousel component',
+          'Mentored junior developers on frontend engineering best practices',
+        ],
+      },
+    ],
+  },
+  {
     name: 'Snap! Raise',
     location: 'Seattle, Washington',
     logo:
@@ -97,7 +115,7 @@ export const PLACESS_OF_EMPLOYMENT = [
       {
         title: 'Software Engineer',
         startDate: 'Aug 2018',
-        endDate: 'Present',
+        endDate: 'October 2019',
         bullets: [
           'Authored a robust, in-house CSS framework, used in all of our applications, enabling the entire team to efficiently build scalable UI features in significantly less time with fewer bugs',
           'Led initiative to introduce an internal design system focused on application development across all products; wrote and maintain design system documentation and training on the topic',
@@ -168,6 +186,10 @@ export const PLACESS_OF_EMPLOYMENT = [
 ];
 
 export const OPEN_SOURCE_CONTRIBUTIONS = [
+  {
+    pullRequest: 'https://github.com/mobxjs/mobx-react-docz/pull/52',
+    project: 'MobX',
+  },
   {
     pullRequest: 'https://github.com/typeorm/typeorm/pull/3612',
     project: 'TypeORM',
