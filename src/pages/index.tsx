@@ -26,7 +26,9 @@ export class IndexPage extends React.Component<Props> {
           className="font-weight-thin font-size-xl"
           style={{ lineHeight: '2.5rem' }}
         >
-          I'm a UI Engineer at Expedia Group in Seattle, Washington.
+          I'm a Software Engineer @{' '}
+          <ExternalLink href="https://losant.com">Losant</ExternalLink> in
+          Cincinnati, OH.
         </p>
 
         <h2 className="mt-3xl">projects</h2>
