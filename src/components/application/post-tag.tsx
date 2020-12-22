@@ -8,6 +8,15 @@ const TAG_COLORS = {
   css: {
     bg: '#27A9DF',
   },
+  nest: {
+    bg: '#27A9DF',
+  },
+  typescript: {
+    bg: '#27A9DF',
+  },
+  authorization: {
+    bg: '#27A9DF',
+  },
 };
 
 export default class PostTag extends React.Component<Props> {

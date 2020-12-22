@@ -12,7 +12,7 @@ export class Footer extends React.Component<Props> {
     return (
       <footer className="footer font-size-sm">
         <div className="container flex justify-between">
-          <div>© {this.props.author} 2019</div>
+          <div>© {this.props.author} 2021</div>
           <div>
             <ExternalLink
               href="https://github.com/tjhillard"

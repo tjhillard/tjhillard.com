@@ -27,7 +27,7 @@ export class IndexPage extends React.Component<Props> {
           style={{ lineHeight: '2.5rem' }}
         >
           I'm a Software Engineer @{' '}
-          <ExternalLink href="https://losant.com">Losant</ExternalLink> in
+          <ExternalLink href="https://losant.com" className="text-secondary">Losant</ExternalLink> in
           Cincinnati, OH.
         </p>
 
