@@ -5,7 +5,7 @@ module.exports = {
     author: 'TJ Hillard',
     title: 'tjhillard.com',
     url: 'http://tjhillard.com',
-    description: 'TJ Hillard is a Software Engineer in Seattle, Washington.',
+    description: 'TJ Hillard is a Software Engineer in Cincinnati, Ohio',
     image: '/computer.jpg',
   },
   plugins: [
