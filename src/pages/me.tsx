@@ -4,7 +4,7 @@ import ExternalLink from '../components/base/external-link';
 import {
   TOP_SKILLS,
   SKILLS,
-  PLACESS_OF_EMPLOYMENT,
+  PLACES_OF_EMPLOYMENT,
   RECOMMENDATIONS,
   OPEN_SOURCE_CONTRIBUTIONS,
 } from '../../data/me';
@@ -105,8 +105,8 @@ export default class MePage extends React.Component {
         <h2 className="mt-3xl">experience</h2>
 
         <section className="grid">
-          {PLACESS_OF_EMPLOYMENT.map(company => (
-            <div key={company.name} className="col-12">
+          {PLACES_OF_EMPLOYMENT.map(company => (
+            <div key={company.name} className="col-12 mt-2xl">
               <div className="flex mb-md">
                 <img
                   src={company.logo}
@@ -121,9 +121,9 @@ export default class MePage extends React.Component {
                 </div>
               </div>
 
-              <div className="pt-sm">
+              <div className="">
                 {company.positions.map(position => (
-                  <div key={position.title}>
+                  <div key={position.title} className="">
                     <div className="flex justify-between flex-col md:flex-row md:items-center">
                       <h3>{position.title}</h3>
                       <div className="font-size-sm">
@@ -131,7 +131,7 @@ export default class MePage extends React.Component {
                       </div>
                     </div>
 
-                    <ul className="pt-md">
+                    <ul className="">
                       {position.bullets.map((bullet, index) => (
                         <li
                           key={index}

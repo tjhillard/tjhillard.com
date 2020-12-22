@@ -3,17 +3,23 @@ export const TOP_SKILLS = [
     name: 'JavaScript',
     image:
       'https://storage.googleapis.com/tjhillard.com/thumbnails/javascript.png',
-    yearsExperience: 4,
+    yearsExperience: 5,
   },
   {
     name: 'HTML & CSS',
     image: 'https://storage.googleapis.com/tjhillard.com/thumbnails/html.png',
-    yearsExperience: 4,
+    yearsExperience: 5,
   },
   {
     name: 'Vue.js',
     image: 'https://storage.googleapis.com/tjhillard.com/thumbnails/vue.png',
     yearsExperience: 3,
+  },
+  {
+    name: 'React',
+    image:
+      'https://storage.googleapis.com/tjhillard.com/thumbnails/react.png',
+    yearsExperience: 2,
   },
   {
     name: 'Testing',
@@ -23,7 +29,7 @@ export const TOP_SKILLS = [
   {
     name: 'Node.js',
     image: 'https://storage.googleapis.com/tjhillard.com/thumbnails/node.jpg',
-    yearsExperience: 2,
+    yearsExperience: 3,
   },
   {
     name: 'MySQL',
@@ -31,23 +37,18 @@ export const TOP_SKILLS = [
     yearsExperience: 3,
   },
   {
-    name: 'Ruby on Rails',
-    image: 'https://storage.googleapis.com/tjhillard.com/thumbnails/rails.png',
-    yearsExperience: 2,
-  },
-  {
-    name: 'Laravel',
+    name: 'TypeScript',
     image:
-      'https://storage.googleapis.com/tjhillard.com/thumbnails/laravrel.png',
-    yearsExperience: 1,
+      'https://storage.googleapis.com/tjhillard.com/thumbnails/typescript.png',
+      yearsExperience: 2
   },
 ];
 
 export const SKILLS = [
   {
-    name: 'TypeScript',
+    name: 'Ruby on Rails',
     image:
-      'https://storage.googleapis.com/tjhillard.com/thumbnails/typescript.png',
+      'https://storage.googleapis.com/tjhillard.com/thumbnails/rails.png',
   },
   {
     name: 'Sass',
@@ -63,8 +64,8 @@ export const SKILLS = [
       'https://storage.googleapis.com/tjhillard.com/thumbnails/postgres.png',
   },
   {
-    name: 'React',
-    image: 'https://storage.googleapis.com/tjhillard.com/thumbnails/react.png',
+    name: 'Laravel',
+    image: 'https://storage.googleapis.com/tjhillard.com/thumbnails/laravrel.png',
   },
   {
     name: 'Nest.js',
@@ -87,7 +88,23 @@ export const RECOMMENDATIONS = [
   },
 ];
 
-export const PLACESS_OF_EMPLOYMENT = [
+export const PLACES_OF_EMPLOYMENT = [
+  {
+    name: 'Losant',
+    location: 'Cincinnati, Ohio',
+    logo:
+      'https://storage.googleapis.com/tjhillard.com/thumbnails/Losant.svg',
+    positions: [
+      {
+        title: 'Software Engineer II, Front End',
+        startDate: 'February 2020',
+        endDate: 'Present',
+        bullets: [
+          'Feature work, bug fixes, and refactoring of core front end infrastructure for IoT platform product'
+        ],
+      },
+    ],
+  },
   {
     name: 'Expedia Group',
     location: 'Seattle, Washington',
@@ -97,7 +114,7 @@ export const PLACESS_OF_EMPLOYMENT = [
       {
         title: 'UI Engineer',
         startDate: 'October 2019',
-        endDate: 'Present',
+        endDate: 'January 2020',
         bullets: [
           'Identified tech debt and established execution strategy for improving code quality',
           'Took initiative to significantly improve user experience on high-traffic carousel component',
@@ -113,7 +130,7 @@ export const PLACESS_OF_EMPLOYMENT = [
       'https://storage.googleapis.com/tjhillard.com/thumbnails/snapraise.jpeg',
     positions: [
       {
-        title: 'Software Engineer',
+        title: 'Software Engineer, Front End',
         startDate: 'Aug 2018',
         endDate: 'October 2019',
         bullets: [
