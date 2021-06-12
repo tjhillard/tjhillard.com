@@ -19,19 +19,7 @@ export class IndexPage extends React.Component<Props> {
   render() {
     return (
       <Layout>
-        <div className="font-family-secondary font-size-4xl pt-lg">
-          hello! 👋
-        </div>
-        <p
-          className="font-weight-thin font-size-xl"
-          style={{ lineHeight: '2.5rem' }}
-        >
-          I'm a Software Engineer @{' '}
-          <ExternalLink href="https://losant.com" className="text-secondary">Losant</ExternalLink> in
-          Cincinnati, OH.
-        </p>
-
-        <h2 className="mt-3xl">projects</h2>
+        <h2>projects</h2>
 
         <section>
           {projects.map(project => (
